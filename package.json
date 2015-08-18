@@ -1,0 +1,12 @@
+{
+  "name": "mlms",
+  "version": "1.0.0",
+  "description": "Modular LMS",
+  "main": "app.js",
+  "keywords": [
+    "mLMS",
+    "LMS"
+  ],
+  "author": "Gerardo Renovales",
+  "license": "ISC"
+}
