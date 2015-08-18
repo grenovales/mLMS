@@ -1,5 +1,9 @@
 {
   "name": "mlms",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/camazorro/mLMS.git"
+  }  
   "version": "1.0.0",
   "description": "Modular LMS",
   "main": "app.js",
