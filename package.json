@@ -11,6 +11,9 @@
     "mLMS",
     "LMS"
   ],
+  "scripts":{
+    "start": "node app.js"
+  },
   "author": "Gerardo Renovales",
   "license": "ISC",
   "dependencies": {
