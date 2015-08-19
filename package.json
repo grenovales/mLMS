@@ -3,7 +3,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/camazorro/mLMS.git"
-  },  
+  },
   "version": "1.0.0",
   "description": "Modular LMS",
   "main": "app.js",
@@ -12,5 +12,9 @@
     "LMS"
   ],
   "author": "Gerardo Renovales",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "mongodb": "^2.0.42"
+  }
 }
