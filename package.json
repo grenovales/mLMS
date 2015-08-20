@@ -11,14 +11,15 @@
     "mLMS",
     "LMS"
   ],
-  "scripts":{
+  "scripts": {
     "start": "node app.js"
   },
   "author": "Gerardo Renovales",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.3",
     "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "mocha": "^2.2.5",
     "mongodb": "^2.0.42"
   }
 }
