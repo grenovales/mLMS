@@ -32,7 +32,7 @@ module.exports = function(registerRoutes) {
             app.use(bodyParser.json());
             
             app.oauth = oauthserver({
-                model: {}, // See below for specification 
+                model: {}, //TODO: Define Model in MongoDB using Mongoose 
                 grants: ['password'],
                 debug: true
             });
