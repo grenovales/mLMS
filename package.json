@@ -20,10 +20,10 @@
   "dependencies": {
     "body-parser": "^1.13.3",
     "express": "^4.13.3",
-    
-    "mongodb": "^2.0.42"
+    "mongodb": "^2.0.42",
+    "scatter": "^0.7.3"
   },
   "devDependencies": {
-    "mocha": "^2.2.5"    
+    "mocha": "^2.2.5"
   }
 }
