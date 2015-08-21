@@ -1,5 +1,6 @@
-var express = require('express');
-var http = require('http');
+var express = require('express'),
+    bodyParser = require('body-parser'),
+    oauthserver = require('oauth2-server');
 
 /**
  * Normalize a port into a number, string, or false.
@@ -26,15 +27,25 @@ module.exports = function(registerRoutes) {
            
             var app = express();
             
+            app.use(bodyParser.urlencoded({ extended: true }));
+            
+            app.use(bodyParser.json());
+            
+            app.oauth = oauthserver({
+                model: {}, // See below for specification 
+                grants: ['password'],
+                debug: true
+            });
+            
+            app.use(app.oauth.errorHandler());
+            
             //Set Port
             var port = normalizePort(process.env.PORT || '3000');
             
             //Create Server
             registerRoutes(app);
             
-            http.createServer(app).listen(port, function () {
-              console.log('Express server listening on port ' + port);
-            });            
+            app.listen(port);            
         }
     }
     return self;

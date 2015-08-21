@@ -6,7 +6,7 @@ var self = module.exports = {
     },
     
     register: function(express) {
-        express.get('/', self.index);
+        express.get('/', express.oauth.authorise(), self.index);
     }
 };
 self.__module = {
