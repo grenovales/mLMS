@@ -42,5 +42,5 @@ module.exports = function(registerRoutes) {
 
 module.exports.__module = {
     args: ['svc!routes/register'],
-    provides: ['initializeApps']
+    provides: ['initializeApp']
 } 
