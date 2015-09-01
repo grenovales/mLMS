@@ -1,6 +1,6 @@
 var self = module.exports = {
-	register: function(express){
-		express.all('/oauth/token', express.oauth.grant());
+	register: function(server){
+		server.post('/oauth/token', server.oauth.grant());
 	}
 };
 self.__module = {

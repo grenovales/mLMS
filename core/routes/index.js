@@ -5,8 +5,8 @@ var self = module.exports = {
         res.send('hello world');
     },
     
-    register: function(express) {
-        express.get('/', express.oauth.authorise(), self.index);
+    register: function(server) {
+        server.get('/',server.oauth.authorise(),  self.index);
     }
 };
 self.__module = {
