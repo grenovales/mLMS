@@ -5,6 +5,20 @@ module.exports = function(registerRoutes) {
     var self = {
         initializeApp: function() {
            
+           //MongoDB
+           var mongoose = require('mongoose');
+           var uristring = 'mongodb://localhost/mLMS';
+           
+            // Makes connection asynchronously. Mongoose will queue up database
+            // operations and release them when the connection is complete.
+            mongoose.connect(uristring, function (err, res) {
+            if (err) {
+                console.log ('ERROR connecting to: ' + uristring + '. ' + err);
+            } else {
+                console.log ('Succeeded connected to: ' + uristring);
+            }
+            });           
+           
             var server = restify.createServer({
                 name: 'mLMS',
                 version: '1.0.0'
@@ -13,7 +27,7 @@ module.exports = function(registerRoutes) {
             server.use(restify.bodyParser());
             
             server.oauth = oauthServer({
-                model: {}, //TODO: Define Model in MongoDB using Mongoose 
+                model: require('./models/authentication.js'),  
                 grants: ['password'],
                 debug: true
             });
