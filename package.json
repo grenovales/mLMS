@@ -19,9 +19,10 @@
   "license": "ISC",
   "dependencies": {
     "mongodb": "^2.0.42",
+    "mongoose": "^4.1.4",
+    "node-oauth2-server-restify": "git+https://github.com/markotom/node-oauth2-server-restify.git",
     "restify": "^4.0.0",
-    "scatter": "^0.7.3",
-    "node-oauth2-server-restify": "git+https://github.com/markotom/node-oauth2-server-restify.git"
+    "scatter": "^0.7.3"
   },
   "devDependencies": {
     "mocha": "^2.2.5"

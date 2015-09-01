@@ -5,7 +5,10 @@ module.exports = function(registerRoutes) {
     var self = {
         initializeApp: function() {
            
-            var server = restify.createServer();
+            var server = restify.createServer({
+                name: 'mLMS',
+                version: '1.0.0'
+            });
             
             server.use(restify.bodyParser());
             
