@@ -24,7 +24,7 @@ module.exports = function(registerRoutes) {
                 version: '1.0.0'
             });
             
-            server.use(restify.bodyParser());
+            server.use(restify.bodyParser({mapParams: false}));
             
             server.oauth = oauthServer({
                 model: require('./models/authentication.js'),  
