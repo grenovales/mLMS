@@ -5,3 +5,5 @@ services:
   - mongodb  
 notifications:
   slack: exit-dev:VxExJMhiYWvKaSv7T2p1KUvI
+after_success: 'make report-cov'
+  
