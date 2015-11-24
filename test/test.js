@@ -1,9 +1,18 @@
-var assert = require("assert");
-describe('Array', function() {
-  describe('#indexOf()', function () {
-    it('should return -1 when the value is not present', function () {
-      assert.equal(-1, [1,2,3].indexOf(5));
-      assert.equal(-1, [1,2,3].indexOf(0));
-    });
-  });
+'use strict';
+var assert = require('assert');
+
+function add (a,b){
+	return a + b;
+}
+
+describe('Should add two numbers', function(){
+	var expected = add(1,2);
+	
+	it('should pass', function(){
+		assert.equal(expected,3,'Yay!!!!');	
+	});
+	
+	it('should fail',function(){
+		assert.notEqual(expected,4,'What!!!!');
+	});
 });
